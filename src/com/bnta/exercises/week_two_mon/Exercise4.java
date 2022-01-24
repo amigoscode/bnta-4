@@ -6,6 +6,6 @@ public class Exercise4 {
       Create a method to check if number is prime then use against the input
     */
     public static void main(String[] args) {
-        // args should contain numbers
+
     }
 }

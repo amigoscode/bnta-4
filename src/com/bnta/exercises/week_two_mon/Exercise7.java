@@ -9,6 +9,6 @@ public class Exercise7 {
         i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
     */
     public static void main(String[] args) {
-        // args should contain numbers
+
     }
 }
