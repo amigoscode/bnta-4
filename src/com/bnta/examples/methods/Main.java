@@ -2,31 +2,40 @@ package com.bnta.examples.methods;
 
 public class Main {
     public static void main(String[] args) {
-        String result = printLength( 17);
-        System.out.println(result);
-    }
+//        System.out.println(capitalize("Michael"));
+//        System.out.println(numLength("Michael"));
+//        System.out.println(capitalize("Abdi"));
+//        System.out.println(capitalize("Linda"));
+//        display("Linda");
 
-    static String printLength(int age) {
-        if (age < 16) {
-            return "still a child";
-        } else {
-            return "hooray adult :)";
+        String[] names = {"Michael", "Linda", "Sarina"};
+        String [] result = capitalizeStrings(names);
+        for(String r : result) {
+            System.out.println(r);
         }
     }
 
-//    static void printLength(String name, int age) {
-//        int length = name.length();
-//        System.out.println(name + " -> " + length);
-//        if (age < 16) {
-//            System.out.println("still a child");
-//        } else {
-//            System.out.println("hooray adult :)");
-//        }
-//    }
+    static private String[] capitalizeStrings(String[] strings) {
+        String[] capitals = new String[strings.length];
+        for (int i = 0; i < strings.length; i++) {
+            capitals[0] = strings[i].toUpperCase();
+        }
+        return capitals;
+    }
 
-//    static void printLength() {
-//        String name = "Alex";
-//        int length = name.length();
-//        System.out.println(name + " -> " + length);
-//    }
+    static public String capitalize(String foo) {
+        return foo.toUpperCase();
+    }
+
+    static public int numLength(String foo) {
+        return foo.length();
+    }
+
+    static public void display(String foo) {
+        System.out.println("------------------");
+        System.out.println(foo.toUpperCase());
+        System.out.println(foo.length());
+        System.out.println("------------------");
+    }
+
 }

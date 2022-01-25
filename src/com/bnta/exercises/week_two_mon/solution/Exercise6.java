@@ -1,4 +1,4 @@
-package com.bnta.exercises.week_two_mon;
+package com.bnta.exercises.week_two_mon.solution;
 
 public class Exercise6 {
     /*
