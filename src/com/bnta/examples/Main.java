@@ -1,4 +1,4 @@
-package com.bnta.exercises;
+package com.bnta.examples;
 
 import java.util.Scanner;
 

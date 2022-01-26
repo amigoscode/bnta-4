@@ -7,6 +7,7 @@ public class Exercise2 {
       Write a program that transforms input into: Bright Network
     */
     public static void main(String[] args) {
+        String blue = "BLUE";
 
     }
 }

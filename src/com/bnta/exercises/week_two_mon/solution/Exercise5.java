@@ -10,6 +10,7 @@ public class Exercise5 {
             if no then program should exit
     */
     public static void main(String[] args) {
+        String blue = "BLUE";
 
     }
 }

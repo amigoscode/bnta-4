@@ -10,6 +10,8 @@ public class Exercise1 {
         // invoke your function here
         System.out.println(reverse("Wendy"));
         System.out.println(reverse("Sarina"));
+        String blue = "BLUE";
+
     }
 
     static String reverse(String input) {

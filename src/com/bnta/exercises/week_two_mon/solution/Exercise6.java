@@ -9,6 +9,7 @@ public class Exercise6 {
             i.e. "hellogmail.com" -> false
     */
     public static void main(String[] args) {
+        String blue = "BLUE";
 
     }
 }

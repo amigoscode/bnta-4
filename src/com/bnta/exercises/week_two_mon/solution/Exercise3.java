@@ -7,5 +7,7 @@ public class Exercise3 {
     */
     public static void main(String[] args) {
         // args should contain numbers
+        String blue = "BLUE";
+
     }
 }
