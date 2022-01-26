@@ -9,7 +9,30 @@ public class Exercise7 {
         i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
     */
     public static void main(String[] args) {
+        System.out.println(
+                longestWords(new String[]{"Will", "Yang", "Foo", "Suraaj", "Sarina", "Suraaj", "Suraaj"})
+        );
+    }
 
-        String blue = "SumMer";
+    static String longestWords(String[] input) {
+        String longest = "";
+        int longestWord = 0;
+        for (String i : input) {
+            if (i.length() > longestWord) {
+                longestWord = i.length();
+                longest = i + ",";
+            } else if (i.length() == longestWord) {
+                boolean duplicate = false;
+                for (String s : longest.split(",")) {
+                    if (s.equals(i)) {
+                        duplicate = true;
+                    }
+                }
+                if (!duplicate) {
+                    longest += i + ",";
+                }
+            }
+        }
+        return longest.substring(0, longest.length() - 1);
     }
 }
