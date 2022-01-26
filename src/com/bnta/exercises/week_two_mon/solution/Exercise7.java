@@ -26,6 +26,7 @@ public class Exercise7 {
                 for (String s : longest.split(",")) {
                     if (s.equals(i)) {
                         duplicate = true;
+                        break;
                     }
                 }
                 if (!duplicate) {
