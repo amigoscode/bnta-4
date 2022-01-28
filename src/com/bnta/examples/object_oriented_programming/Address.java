@@ -1,4 +1,4 @@
-package com.bnta.examples.oop;
+package com.bnta.examples.object_oriented_programming;
 
 public class Address {
     private String firstLine;
