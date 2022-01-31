@@ -4,7 +4,15 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        int usingStatic = add(1, 2);
 
         Person aaron = new Person(
                 "Aaron",
@@ -34,6 +42,21 @@ public class Main {
         );
 
         System.out.println(house);
+
+        Person wen = new Person(
+                "Wendy",
+                SkinColor.BLACK
+        );
+        System.out.println(wen);
+
+        Person will = new Person();
+        will.setName("Will");
+        will.setSkinColor(SkinColor.WHITE);
+
+        System.out.println("toString........");
+        System.out.println(will);
+
+        System.out.println(Person.count);
     }
 
     private static void example1() {

@@ -1,19 +1,41 @@
 package com.bnta.examples.object_oriented_programming;
 
 public class Person {
+
+    static int count = 0;
+
     private String name;
     private int age;
     private SkinColor skinColor;
     private String nationality;
 
-    public Person() {
+    Person() {
+        count++;
     }
 
-    public Person(String name, int age, SkinColor skinColor, String nationality) {
+    Person(String name,
+                  int age,
+                  SkinColor skinColor,
+                  String nationality) {
         this.name = name;
         this.age = age;
         this.skinColor = skinColor;
         this.nationality = nationality;
+        count++;
+    }
+
+    public Person(SkinColor skinColor) {
+        this.age = 0;
+        this.skinColor = skinColor;
+        count++;
+    }
+
+    public Person(String name,
+                  SkinColor skinColor) {
+        this.name = name;
+        this.age = 0;
+        this.skinColor = skinColor;
+        count++;
     }
 
     public Person(String name) {
