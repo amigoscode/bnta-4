@@ -4,13 +4,15 @@ public class GarageService {
     // This class performs all business logic for the following:
     // 1. add cars
     // 2. how many cars in the garage
-    // 2. number of free spots in garage
-    // 3. remove car
-    // 4. Open and close garage
-    // 5. isGarageFull
-    // 6. filter electric cars
-    // 7. filter non electric cars
-    // 6. Clean garage
+    // 3. number of free spots in garage
+    // 4. remove car
+    // 5. Open and close garage
+    // 6. isGarageFull
+    // 7. filter electric cars
+    // 8. filter non electric cars
+    // 9. Clean garage. Remove all cars and put them back and in between print garage cleaned
+    // 10. Create GarageDAO class and store current cars in garage to a file
+    // 11. Create a second method to read cars from a file
 
     public void addCar(Garage garage, Car car) {
         // check if open
