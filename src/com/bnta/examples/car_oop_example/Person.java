@@ -1,5 +1,7 @@
 package com.bnta.examples.car_oop_example;
 
+import com.bnta.examples.car_oop_example.car.Car;
+
 import java.util.Arrays;
 
 public class Person {

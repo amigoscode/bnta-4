@@ -1,4 +1,6 @@
-package com.bnta.examples.car_oop_example;
+package com.bnta.examples.car_oop_example.car;
+
+import java.util.Objects;
 
 public class Car {
     private String make;
@@ -44,4 +46,18 @@ public class Car {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return isElectric == car.isElectric &&
+                Objects.equals(make, car.make) &&
+                Objects.equals(regNumber, car.regNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(make, regNumber, isElectric);
+    }
 }

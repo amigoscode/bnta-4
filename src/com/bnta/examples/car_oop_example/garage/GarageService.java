@@ -1,4 +1,6 @@
-package com.bnta.examples.car_oop_example;
+package com.bnta.examples.car_oop_example.garage;
+
+import com.bnta.examples.car_oop_example.car.Car;
 
 public class GarageService {
     // This class performs all business logic for the following:
@@ -16,12 +18,17 @@ public class GarageService {
 
     public void addCar(Garage garage, Car car) {
         // check if open
-            // if open check not full
-                // then add car to garage
-            // if full throw exception
+        // if open check not full
+        // then add car to garage
+        // if full throw exception
         // if not open throw exception
         if (garage.isOpen()) {
-            int currentCarsInGarageCount = getTotalNumberOfCarsInGarage(garage);
+            int currentCarsInGarageCount = 0;
+            for (Car c : garage.getCars()) {
+                if (c != null) {
+                    currentCarsInGarageCount++;
+                }
+            }
             if (currentCarsInGarageCount < garage.getCapacity()) {
                 for (int i = 0; i < garage.getCars().length; i++) {
                     if (garage.getCars()[i] == null) {
@@ -37,14 +44,29 @@ public class GarageService {
         }
     }
 
-    public int getTotalNumberOfCarsInGarage(Garage garage) {
-        int currentCarsInGarageCount = 0;
-        for (Car c : garage.getCars()) {
-            if (c != null) {
-                currentCarsInGarageCount++;
+    // 7. filter electric cars
+
+    public Car[] filterByElectric(Garage garage, boolean isElectric) {
+        int arraySize = 0;
+        for (Car car : garage.getCars()) {
+            if (car == null) {
+                continue;
+            }
+            if (car.isElectric() == isElectric) {
+                arraySize++;
             }
         }
-        return currentCarsInGarageCount;
+        Car[] electricCars = new Car[arraySize];
+        int index = 0;
+        for (Car car : garage.getCars()) {
+            if (car == null) {
+                continue;
+            }
+            if (car.isElectric() == isElectric) {
+                electricCars[index++] = car;
+            }
+        }
+        return electricCars;
     }
 
 

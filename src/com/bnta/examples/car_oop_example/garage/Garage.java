@@ -1,4 +1,7 @@
-package com.bnta.examples.car_oop_example;
+package com.bnta.examples.car_oop_example.garage;
+
+import com.bnta.examples.car_oop_example.car.Car;
+import com.bnta.examples.car_oop_example.Person;
 
 import java.util.Arrays;
 
