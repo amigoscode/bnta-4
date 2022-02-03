@@ -128,6 +128,32 @@ class GarageServiceTest {
     }
 
     @Test
+    void canCountNumberOfCarsInGarageWhenFullAndTryToAddAnotherCar() {
+        // Given
+        GarageService garageService = new GarageService();
+        Car car = new Car("Honda", "1234", false);
+        Car tesla = new Car("Tesla", "1234", false);
+        Car fiat = new Car("Fiat", "1234", false);
+        Car[] cars = {car, tesla};
+        Person connie = new Person("Connie", 24, "", cars);
+        Garage garage = new Garage(connie, 10, 2);
+        garageService.openOrGarage(garage);
+        garageService.addCar(garage, car);
+        garageService.addCar(garage, car);
+        assertThatThrownBy(() -> {
+            garageService.addCar(garage, fiat);
+        }).hasMessage(garage.getGarageNumber() + " is full. Sorry :(");
+
+        // When
+        int actual = garageService.getCurrentCarsInGarageCount(garage);
+
+        // Then
+        int expected = 2;
+        assertThat(actual).isEqualTo(expected);
+    }
+
+
+    @Test
     void getFreeSpacesInGarageCount() {
         // Given
 
