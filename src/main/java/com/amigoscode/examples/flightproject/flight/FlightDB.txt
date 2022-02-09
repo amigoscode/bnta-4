@@ -1,0 +1,3 @@
+code1,BER,2022-1-22-9-30,1,[null]
+code2,BJS,2022-2-10-10-0,2,[null, null]
+code3,BOD,2022-3-2-13-45,2,[null, 1]
