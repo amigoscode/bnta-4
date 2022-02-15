@@ -13,29 +13,19 @@ class FlightFileDBTest {
 
     @Test
     void name() {
-        // Given
-        FlightFileDB flightFileDB = new FlightFileDB();
 
-        // When
-        List<Flight> allFlights = flightFileDB.getAllFlights();
-
-        // Then
-        assertThat(allFlights).isEmpty();
+        Map<Integer, Integer> map = new HashMap<>();
 
 
-        Map<String, Integer> map = new HashMap<>();
+        List<Integer> integers = List.of(1, 2, 1, 3);
 
-        map.put("foo", 1);
+        for (Integer i : integers) {
 
+            Integer val = map.get(i);
 
-        int count = 0;
+            map.put(i, val == null ? 1 : val + 1);
 
-        for (Map.Entry<String, Integer> e : map.entrySet()) {
-
-            System.out.println(e.getKey());
-            Integer value = e.getValue();
-            boolean b = value > 0;
-            System.out.println(value);
         }
+
     }
 }
