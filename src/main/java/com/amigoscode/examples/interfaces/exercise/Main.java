@@ -5,7 +5,10 @@ public class Main {
         PersonDAO personDAO = new PersonFileDataAccessService();
 
         PersonService personService = new PersonService(personDAO);
-        personService.savePerson(new Person(2, "Alex", 20));
+//        personService.savePerson(new Person(3, "Robyn", 20));
+//
+        System.out.println(1 + 1);
+        System.out.println("1" + "1");
 
         System.out.println(personService.getPeople());
     }
